@@ -1,0 +1,16 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# Local game and mod data
+BepInEx/
+UserData/
+MelonLoader/
+
+# IDE and user settings
+.vs/
+*.user
+*.suo
+
+# Local planning notes
+docs/superpowers/

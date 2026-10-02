@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>LC2ArmorHud</AssemblyName>
+    <RootNamespace>LC2ArmorHud</RootNamespace>
+    <Version>0.8.0</Version>
+    <LangVersion>latest</LangVersion>
+    <GameRoot Condition="'$(GameRoot)' == ''">D:\SteamLibrary\steamapps\common\Lost Castle 2</GameRoot>
+    <BepInExRoot>$(GameRoot)\BepInEx</BepInExRoot>
+    <BepInExCore>$(BepInExRoot)\core</BepInExCore>
+    <Il2CppAssemblies>$(BepInExRoot)\interop</Il2CppAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ArmorHudCatalog.cs" Link="ArmorHudCatalog.cs" />
+    <Compile Include="..\ArmorHudCountdownTracker.cs" Link="ArmorHudCountdownTracker.cs" />
+    <Compile Include="..\DemonShellHudSettings.cs" Link="DemonShellHudSettings.cs" />
+    <Compile Include="..\DemonShellHudCounterReader.cs" Link="DemonShellHudCounterReader.cs" />
+    <Compile Include="..\DemonShellHudRenderer.cs" Link="DemonShellHudRenderer.cs" />
+    <Compile Include="..\DemonShellHudConfigPanel.cs" Link="DemonShellHudConfigPanel.cs" />
+    <Compile Include="..\DemonShellHudController.cs" Link="DemonShellHudController.cs" />
+    <Compile Include="..\ProbeUtilities.cs" Link="ProbeUtilities.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx.Core">
+      <HintPath>$(BepInExCore)\BepInEx.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.Common">
+      <HintPath>$(BepInExCore)\BepInEx.Unity.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx.Unity.IL2CPP">
+      <HintPath>$(BepInExCore)\BepInEx.Unity.IL2CPP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(BepInExCore)\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(Il2CppAssemblies)\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(Il2CppAssemblies)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(Il2CppAssemblies)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(Il2CppAssemblies)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(Il2CppAssemblies)\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(Il2CppAssemblies)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(Il2CppAssemblies)\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(Il2CppAssemblies)\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LC2.Core">
+      <HintPath>$(Il2CppAssemblies)\LC2.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
